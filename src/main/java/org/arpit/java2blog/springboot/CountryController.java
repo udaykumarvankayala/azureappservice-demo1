@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class CountryController {
  
- @GetMapping("/countries")
- //@RequestMapping(value = "/countries", method = RequestMethod.GET,headers="Accept=application/json")
+
+ @RequestMapping(value = "/countries", method = RequestMethod.GET,headers="Accept=application/json")
  public List<Country> getCountries()
  {
   List<Country> listOfCountries = new ArrayList<Country>();
