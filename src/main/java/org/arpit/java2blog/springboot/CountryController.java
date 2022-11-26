@@ -5,15 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.arpit.java2blog.springboot.bean.Country;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CountryController {
  
- @RequestMapping(value = "/countries", method = RequestMethod.GET,headers="Accept=application/json")
+ @GetMapping("/countries")
+ //@RequestMapping(value = "/countries", method = RequestMethod.GET,headers="Accept=application/json")
  public List<Country> getCountries()
  {
   List<Country> listOfCountries = new ArrayList<Country>();
